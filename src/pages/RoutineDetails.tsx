@@ -116,8 +116,9 @@ const RoutineDetails = () => {
           handleSuccess("Routine successfully scheduled!");
           setOpenScheduleDialog(false);
         },
-        onError: (error) => {
+        onError: (error: any) => {
           alert("Failed to schedule the routine. Please check your connection and try again.");
+          console.log("Error scheduling routine:", error);
         }
       }
     );

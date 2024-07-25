@@ -31,6 +31,7 @@ export const WebSocketProvider = ({ children }: WebSocketProviderProps) => {
 
   useEffect(() => {
     if (userId) {
+      console.log(connectionStatus);
       console.log("Initializing WebSocket connection for user:", userId);
       // ws.current = new WebSocket(`ws://localhost:8080/websocket?userId=${userId}`);
       ws.current = new WebSocket(`${WEBSOCKET_BASE_URL}?userId=${userId}`);
